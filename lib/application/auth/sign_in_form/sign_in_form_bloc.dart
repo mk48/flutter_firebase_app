@@ -33,7 +33,7 @@ class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
       },
       passwordChanged: (e) async* {
         yield state.copyWith(
-          emailAddress: EmailAddress(e.passwordStr),
+          password: Password(e.passwordStr),
           authFailureOrSuccessOption: none(),
         );
       },
